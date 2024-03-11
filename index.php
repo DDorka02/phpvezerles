@@ -73,22 +73,37 @@
     print_r($veletlenek);
     echo "A számok összege: $osszeg.<br>";
 
-    $sorok =8;
-    $oszlop=8;
+   
 
     echo "<h2>Sakk tábla</h2>";
+
     echo "<table>";
-    for ($index = 0; $index < 8; $index++){
+    echo "<tr>";
+    echo "<td></td>";
+    for ($i = 97; $i < 105; $i++){
+        echo "<td>" .chr($i). "</td>";        
+
+    }
+     echo "</tr>";
+    for ($i =8; $i < 0; $i--){
         echo "<tr>";
-        echo "<th>  a b c d e f g </th>";        
-
+        echo "<td>$i</td>";
+        if ($i %2 ==0){
+            for ($j = 0; $j < 4; $j++){
+                echo "<td class='feher'></td>";
+                echo"<td class='szurke'></td>";
+            }
+    }   
+        else{
+            for ($j = 0; $j < 4; $j++){
+                echo "<td class='szurke'></td>";
+                echo"<td class='feher'></td>";
+            }
+        }
+    
     }
-    for ($index = 0; $index < 10; $index++){
-        //szam
-        //for
-
-    }
-    echo "</table>"
+    echo "</tr>";
+    echo "</table>";
 
 
     ?>
